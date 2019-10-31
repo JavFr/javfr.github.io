@@ -1,0 +1,37 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{page.lang}}">
+  <head>
+    <title>{{ site.name }} | {{ page.subtitle }}</title>
+
+    <!--Meta Tags-->
+    {% include meta.html %}
+
+    <!--Material Bootstrap-->
+    {% include mdb.html %}
+
+    <!--Inline CSS-->
+    <style type="text/css">
+      {% capture include_to_scssify %}
+        {% if page.ref == 'portfolio' %}
+          {% include inlinePortfolio.scss %}
+        {% else if page.type == 'album' %}
+          {% include inlineAlbum.scss %}
+        {% else %}
+          {% include inline.scss %}
+        {% endif %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}!important
+    </style>
+
+    <!--RSS FEED-->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="/feed.xml" />
+
+  </head>
+
+  {{ content }}
+
+</html>

@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<body>
+    <header>
+        <!--NAVBAR-->
+        {% include navbar.html %}
+        <!--NAVBAR-->
+    </header>
+
+<main class="container mt-5">
+    <h1>Blog</h1>
+{% assign posts=site.posts | where:"lang", page.lang %}  
+    {% for post in posts %}
+    <!--Small news-->
+    <div class="row">
+            <div class="col-md-3">
+              <!--Image-->
+              <div class="view rounded z-depth-1">
+                <img src="{{ site.url }}{{post.image}}" class="img-fluid" alt="Minor sample post image">
+                <a href="{{site.baseurl}}{{ post.url }}" }}>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+            </div>
+
+            <!--Excerpt-->
+            <div class="col-md-9">
+              <p class="dark-grey-text">
+                <strong>{{post.date }}</strong>
+              </p>
+              <a href="{{site.baseurl}}{{ post.url }}"><p>{{ post.excerpt }}</p>
+                <i class="fas fa-angle-right float-right"></i>
+              </a>
+            </div>
+
+          </div>
+          <hr>
+          <!--/Small news-->
+    {% endfor %}
+</main>
+
+    <!--FOOTER-->
+    {% include footer.html %}
+    <!--FOOTER ENDS-->
+
+    <!-- SCRIPTS -->
+
+    <!--COMMON SCRIPTS-->
+    {% include footerScripts.html %}
+
+    <!--SCRIPTS ENDS-->
+
+    <!-- NAV OVERLAY -->
+    {% include overlay.html %}
+    <!-- NAV OVERLAY ENDS-->
+
+</body>
+

@@ -1,0 +1,18 @@
+ <!-- The overlay -->
+ <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        {% for item in site.data.navigation %}
+        {% if item.lang == page.lang %}
+            <a class="nav-link" href="{{site.baseurl}}{{ item.link }}">
+              {{ item.name | capitalize }}
+              {% if item.link == page.link %}<span class="sr-only">(current)</span>{% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+    </div>
+  </div> 

@@ -1,0 +1,70 @@
+
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="horizontalBar">
+   
+    
+  <a class="navbar-brand" href="{{site.baseurl}}">
+      <div style="width: 100px; position: absolute; fill: white; top: 10px;" class="h2">
+      JF
+      </div>
+    </a>
+
+    <button class="navbar-toggler order-3" type="button"
+      aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAVIGATION ITEMS -->
+    <div class="order-1 collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto mt-lg-0">
+            {% for item in site.data.navigation %}
+            {% if item.lang == page.lang %}
+              <li class="nav-item {% if item.link == page.link %} active {% endif %}">
+                <a class="nav-link" href="{{site.url}}{{ item.link }}">
+                  {{ item.name | capitalize }}
+                  {% if item.link == page.link %}<span class="sr-only">(current)</span>{% endif %}
+                </a>
+              </li>
+              {% endif %}
+            {% endfor %}
+        </ul>
+      </div>
+      <!-- NAVIGATION ITEMS  END-->
+
+      <!-- LANG SELECTOR-->
+      {% if page.type == 'work' %}
+      <div class="order-2 nav-item dropdown ml-auto">
+          <a class="nav-link text-white dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                {{ page.lang | capitalize }}
+          </a>
+          <div class="dropdown-menu dropdown-primary px-auto" style="min-width: 1rem !important;" aria-labelledby="navbarDropdownMenuLink">
+              {% assign works=site.works | where:"ref", page.ref | sort: 'lang' %}
+              {% for work in works %}
+              {% if work.lang != page.lang %}
+                  <li>
+                    <a href="{{site.url}}{{ work.url }}" class="{{ work.lang }}">{{ work.lang | capitalize }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+          </div>
+      </div>   
+      {% else %}
+      <div class="order-2 nav-item dropdown ml-auto">
+          <a class="nav-link text-white dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                {{ page.lang | capitalize }}
+          </a>
+          <div class="dropdown-menu dropdown-primary px-auto" style="min-width: 1rem !important;" aria-labelledby="navbarDropdownMenuLink">
+              {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+              {% for alt-page in pages %}
+                {% if alt-page.lang != page.lang %}
+                  <li>
+                    <a href="{{site.url}}{{ alt-page.url }}" class="{{ alt-page.lang }}">{{ alt-page.lang | capitalize }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+          </div>
+      </div>
+      {% endif %}
+      <!-- LANG SELECTOR ENDS -->
+</nav>

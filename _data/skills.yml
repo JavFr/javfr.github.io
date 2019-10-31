@@ -1,0 +1,57 @@
+- image: /assets/images/skills/html.png
+  alt: HTML5
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-primary
+- image: /assets/images/skills/jekyll.png
+  alt: Jekyll Site Builder
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-info
+- image: /assets/images/skills/css3.png
+  alt: CSS3
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-success
+- image: /assets/images/skills/bootstrap.png
+  alt: Bootstrap
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-white
+- image: /assets/images/skills/mdb.png
+  alt: Material Design Bootstrap
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-dark
+- image: /assets/images/skills/java.png
+  alt: Java
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-default
+- image: /assets/images/skills/javascript.png
+  alt: Javascript
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-white
+- image: /assets/images/skills/jquery-logo.png
+  alt: Jquery
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-secondary
+- image: /assets/images/skills/react.png
+  alt: React
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-dark
+- image: /assets/images/skills/redux.png
+  alt: Redux
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-white
+- image: /assets/images/skills/php.png
+  alt: PHP
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-light
+- image: /assets/images/skills/laravel.png
+  alt: Laravel
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-white
+- image: /assets/images/skills/mongodb.png
+  alt: Mongo DB
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-success
+- image: /assets/images/skills/mysql.png
+  alt: MySql
+  size: col-4 col-md-2 col-lg-2
+  bg: bg-primary
+

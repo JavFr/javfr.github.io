@@ -1,0 +1,35 @@
+#HOME
+- name: Inicio
+  lang: es
+  link: "#section-home"
+
+- name: Home
+  lang: en
+  link: "#section-home"
+
+#Skills
+- name: Conocimientos
+  lang: es
+  link: "#section-skills"
+
+- name: Skills
+  lang: en
+  link: "#section-skills"
+
+#Projects
+- name: Proyectos
+  lang: es
+  link: "#section-projects"
+
+- name: Projects
+  lang: en
+  link: "#section-projects"
+
+#Trabajos
+- name: Trabajos
+  lang: es
+  link: "#section-works"
+
+- name: Works
+  lang: en
+  link: "#section-works"

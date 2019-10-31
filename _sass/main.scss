@@ -1,0 +1,69 @@
+
+@import '_variables';
+@import '_navbar';
+@import '_color';
+@import '_fonts';
+
+*,*:before,*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+}
+
+#horizontalBar{
+  box-shadow: none;
+  background-color: #0a2463 !important;
+}
+.navbar.scrolling-navbar{
+  background-color: #0a2463 !important;
+}
+/*
+@media (max-width: 700px) and (orientation: portrait) { 
+
+}
+*/
+#dot-nav{
+  position: fixed;
+  top: 50%;
+  right: 5%;
+}
+
+.full-page{
+  width: 100vw;
+  min-height: 100vh;
+}
+#section-home{
+  background: #0a2463;
+  height: 100vh;
+}
+#section-contact{
+  background: green;
+}
+#section-skills{
+  background: greenyellow;
+}
+
+.active {
+  transform: scale(1.3);
+  opacity: .8;
+}
+.arrow-btn{
+  color: white;
+  font-weight: bold;
+}

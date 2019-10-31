@@ -1,0 +1,53 @@
+//COLORS
+$oxford-blue: #002642;
+$japanese-indigo: #16425b;
+$dark-sky-blue: #81c3d7;
+$dazzled-blue: #2f6690;
+$steel-blue: #3a7ca5;
+$gainsboro: #d9dcd6;
+$big-foot-feet: #f79256;
+$maximum-yellow-red: #edae49;
+$dark-pink: #ea526f;
+$spring-green: #cce2a3;
+
+//COLOR THEMES
+//$nav-color: #1C2331;
+//$nav-color: $japanese-indigo;
+//$nav-color: #25ced1;
+$bodyColor: #000000;
+$backgroundColor: #ffffff;
+//$static-section-color1: #4AC29A;
+//$static-section-color2: #BDFFF3;
+
+//$jumbo-section-color1: #6b30aa;
+//$jumbo-section-color2: #20063b;
+$navbar-color: #654f6f;
+$footer-color: #654f6f;
+
+$clases-color: white;
+
+$icons-color: #f0386b;
+$contact-icons-color: #654f6f;
+
+$active: #e0e2db41;
+
+
+//Fonts
+$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+.bg-footer{
+    background-color: $footer-color;
+}
+
+.bg-mauve{
+    background-color: #ac80a0;
+}
+.bg-clases{
+    background-color: $clases-color;
+}
+.bg-eventos{
+    background-color: $clases-color;
+}
+.bg-contacto{
+    background-color: $clases-color;
+}

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<body>
+    <div class="wrapper">
+        <header>
+            <!--NAVBAR-->
+            {% include navbar.html %}
+            <!--NAVBAR-->
+        </header>
+
+        <!-- Main start -->
+        <main class="pt-5">
+            <div class="container">
+                {{ content }}
+            </div>      
+        </main>
+        <!-- MAIN END-->
+
+        <!--FOOTER-->
+        {% include footer.html %}
+        <!--FOOTER ENDS-->
+
+        <!-- SCRIPTS -->
+
+        <!--COMMON SCRIPTS-->
+        {% include footerScripts.html %}
+
+        <!--SCRIPTS ENDS-->
+
+        <!-- NAV OVERLAY -->
+        {% include overlay.html %}
+        <!-- NAV OVERLAY ENDS-->
+</body>

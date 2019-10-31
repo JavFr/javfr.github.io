@@ -1,0 +1,98 @@
+
+#NOMBRE DE LA MARCA
+name: Javier Franco Brustolon
+
+#TITULO PRINCIPAL QUE FIGURA EN LAS PESTAÑAS
+title: Javier Brustolon | Desarrollador Web
+
+#CORREO ELECTRONICO DEL SITIO WEB
+email: jav.brustolon@gmail.com
+
+#DESCRIPCION QUE FIGURA EN LA BUSQUEDA DE GOOGLE
+description: Desarrollador Web Full Stack. HTML, CSS, JavaScript, React, ReactNative, Node
+
+#Social
+#twitter_username: 
+github_username:  javfr
+
+index:
+  es: index.html
+  en: index_en.html
+
+############################################################  
+
+#defaults:                                                  #
+#  - scope:                                                 #
+#      path: ""                                             #
+#      type: "post"                                         #
+#    values:                                                #
+#      layout: "blog"                                       #
+
+#########NO MODIFICAR#######################################
+#DIRECCION BASE                                            #
+baseurl: "/" # the subpath of your site, e.g.  #
+#                                                          #
+#DOMINIO DEL SITIO WEB                                     #
+#url: "https://javfr.github.io/"                            #
+url: 192.168.0.37:400
+#                                                          # 
+# Build settings                                           #
+theme: minima                                              #
+#                                                          #
+#Material Design Bootstrap                                 # 
+mdb: true                                                  #
+#                                                          #
+plugins:                                                   #
+  - jekyll-feed                                            #
+  - jekyll-sitemap                                         #
+  - jekyll-seo-tag                                         #
+#                                                          #
+#Lets to publish future posts dates                        #
+#future: true                                               #  
+#                                                          #
+#Collections                                               #
+collections:                                               #                                                         #
+  works:
+    output: true
+  projects:
+    output: true
+#  codepens:
+#    output: false
+#                                                          #  
+#  testimonios:                                             #
+#    output: false                                          #
+##################                                         #
+#defaults:                                                  #
+#  - scope:                                                 #
+#      path: ""                                             #
+#      type: "eventos"                                      #
+#    values:                                                #
+#      layout: "eventos"                                    #
+#  - scope:                                                 #
+#      path: ""                                             #
+#      type: "clases"                                       #
+#    values:                                                #
+#      layout: "clases"                                     #
+############################################################
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+

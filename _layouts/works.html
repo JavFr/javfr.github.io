@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<body>
+    <div class="wrapper">
+        <header>
+        <!--NAVBAR-->
+        {% include navbar.html %}
+        <!--NAVBAR-->
+        </header>
+        <!--MAIN STARTS-->
+        <main class="mt-5 pt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    {% if page.lang == 'es' %}
+                        <li class="breadcrumb-item px-2"><a href="{{site.url}}">Inicio</a></li>
+                    {% else %}
+                        <li class="breadcrumb-item px-2"><a href="{{site.url}}/en">Home</a></li>
+                    {% endif %}
+                    <li class="breadcrumb-item pl-2 pr-3">{% if page.lang == 'es' %}Trabajos{% else %}Works{% endif %}</li>
+                    <li class="breadcrumb-item active px-2">{{page.title}}</li>
+                </ol>
+            </nav>
+            <section class="container">
+                <!-- Jumbotron -->
+                <div class="jumbotron text-center">
+
+                        <!-- Title -->
+                        <h1 class="card-title h4 pb-2"><strong>{{page.title}}</strong></h1>
+                    
+                        <!-- Card image -->
+                        <div class="view my-4">
+                        <img src="{{page.thumbnail}}" class="img-fluid" alt="{{page.alt}}">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                        </div>
+                    
+                        <p class="card-text">{{content}}</p>
+                    
+                        <div class="col">
+                            <ul class="list-unstyled d-flex flex-row flex-wrap justify-content-center">
+                                {% for tech in page.technologies %}
+                                <li>
+                                    <span class="badge badge-pill {{tech.color}} mx-2">{{tech.language}}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        {% if page.lang == 'es' %}
+                            <a class="btn btn-primary rounded" href="{{site.url}}/en">
+                                Volver
+                            </a>
+                        {% else %}
+                            <a class="btn btn-primary rounded" href="{{site.url}}/en">
+                                Go back
+                            </a>
+                        {% endif %}
+                        <a class="btn btn-info rounded" href="{{page.link}}" target="_blank">
+                            {% if page.lang == 'es' %}Ir al sitio{% else %}Go to the site{% endif %}
+                        </a>
+                    
+                    </div>
+                    <!-- Jumbotron -->
+            </section>
+        </main>
+        <!-- MAIN END-->
+
+        <!--FOOTER-->
+        {% include footer.html %}
+        <!--FOOTER ENDS-->
+
+        <!-- SCRIPTS -->
+
+        <!--COMMON SCRIPTS-->
+        {% include footerScripts.html %}
+
+        <!--SCRIPTS ENDS-->
+
+        <!-- NAV OVERLAY -->
+        {% include overlay.html %}
+        <!-- NAV OVERLAY ENDS-->
+    </div> 
+</body>

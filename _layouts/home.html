@@ -1,0 +1,150 @@
+---
+layout: default
+---
+<body data-spy="scroll" data-target="#dot-nav">
+    <div class="wrapper">
+        <header>
+        <!--NAVBAR-->
+        {% include navbar.html %}
+        <!--NAVBAR-->
+        </header>
+        <nav id="dot-nav" style="z-index: 99;" class="d-none d-sm-block">
+            <ul class="list-unstyled">
+                <li class="nav-item">
+                    <a role="button" id="slideUp" class="nav-link">
+                        <span class="fa fa-chevron-up arrow-btn"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dot" href="#section-home">
+                        <span class="fa fa-circle"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dot" href="#section-skills">
+                        <span class="fa fa-circle"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dot" href="#section-projects">
+                        <span class="fa fa-circle"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-dot" href="#section-works">
+                        <span class="fa fa-circle"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a role="button" id="slideDown" class="nav-link">
+                        <span class="fa fa-chevron-down arrow-btn"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--MAIN STARTS-->
+        <main >
+            <section id="section-home" class="full-page d-flex flex-column align-items-center justify-content-center">
+                <div class="container pt-5">
+                    <div class="row my-5">
+                        <div class="col text-center text-white">
+                            <h1 class="display-2 animated bounceIn">{{page.h1}}</h1>
+                            <p class="animated fadeIn delay-1s">{{page.subtitle}}</p>
+                        </div>      
+                    </div>
+                </div>
+            </section>
+            <section id="section-skills" class="full-page bg-success">
+                <div class="grid">
+                    <div class="grid-sizer col-2" style="height: 100%;"></div>
+                    {% for skill in site.data.skills %}
+                    <div class="grid-item {{skill.size}} m-0 p-0 {{skill.bg}}">
+                        <img class="img-fluid" style="width: 100%;" src="{{skill.image}}" alt="{{skill.alt}}">
+                    </div>
+                    {% endfor %}
+                    <div class="grid-item d-none d-md-block col-md-8 col-lg-8 text-center mt-3">
+                        <h2>{{page.skills-title}}</h2>
+                        <p>{{page.skills-desc}}</p>
+                    </div>
+                </div>
+                <h2 class="my-auto py-auto text-center card-header bg-success border-top d-md-none">{{page.skills-title}}</h2>
+            </section>
+            <section id="section-projects" class="full-page d-flex flex-column align-items-center justify-content-center">
+                <div class="container justify-self-start">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="mb-5">{{page.section-projects-title}}</h2>
+                        </div>
+                    </div>
+                </div>  
+                <div class="container justify-self-center">
+                    <div class="row justify-content-center">
+                        {% assign projects=site.projects | where:"lang", page.lang %}
+                        {% for project in projects %}
+                        <div class="col-6 col-md-4 col-lg-4 bg-primary p-0">
+                            <!-- Card -->
+                            <div class="card">
+                                <!-- Card image -->
+                                <div class="view">
+                                    <img class="card-img-top" src="{{project.thumbnail}}" alt="{{project.alt}}">
+                                    <a href="{{project.url}}">
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <section id="section-works" class="full-page d-flex flex-column align-items-center justify-content-center">     
+                <div class="container justify-self-start">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="mb-5">{{page.section-works-title}}</h2>
+                        </div>
+                    </div>
+                </div>  
+                <div class="container justify-self-center">
+                    <div class="row justify-content-center">
+                        {% assign works=site.works | where:"lang", page.lang %}
+                        {% for work in works %}
+                        <div class="col-6 col-md-6 bg-primary p-0">
+                            <!-- Card -->
+                            <div class="card">
+                                <!-- Card image -->
+                                <div class="view">
+                                    <img class="card-img-top" src="{{work.thumbnail}}" alt="{{work.alt}}">
+                                    <a href="{{work.url}}">
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- MAIN END-->
+
+        <!--FOOTER-->
+        {% include footer.html %}
+        <!--FOOTER ENDS-->
+
+        <!-- SCRIPTS -->
+
+        <!--COMMON SCRIPTS-->
+        {% include footerScripts.html %}
+        <script src="/assets/js/masonry.pkgd.min.js"></script>
+        <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/assets/js/skills.js"></script>
+        <!--SCRIPTS ENDS-->
+
+        <!-- NAV OVERLAY -->
+        {% include overlay.html %}
+        <!-- NAV OVERLAY ENDS-->
+    </div> 
+</body>

@@ -1,0 +1,75 @@
+
+  <!-- Footer -->
+  <footer class="page-footer font-small pt-4 mb-0 bg-footer">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-5 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">{{ site.data.footer.title }}</h5>
+          <p>{{ site.data.footer.description }}</p>
+
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-1">
+          <nav id="footer-nav">
+            <ul class='navbar-nav'>
+                {% for item in site.data.navigation %}
+                {% if item.lang == page.lang %}
+                  <li class="nav-item {% if item.link == page.link %} active {% endif %}">
+                    <a class="nav-link" href="{{ item.link }}">
+                      {{ item.name | capitalize }}
+                      {% if item.link == page.link %}<span class="sr-only">(current)</span>{% endif %}
+                    </a>
+                  </li>
+                  {% endif %}
+                {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-4 col-sm-4 col-lg-2 text-center order-2">
+                <a href="{{site.data.redes.instagram}}" class="nav-link waves-effect waves-light text-center">
+                  <i class="fab fa-instagram fa-2x"></i>
+                  <p>Instagram</p>
+                </a>
+              </div>
+              <div class="col-4 col-sm-4 col-lg-2 offset-lg-1 order-1 order-sm-3">
+                <a href="{{site.data.redes.facebook-almagro}}" class="nav-link waves-effect waves-light text-center">
+                  <i class="fab fa-facebook fa-2x"></i>
+                  <p>Facebook</p>
+                </a>
+              </div>
+              <div class="col-7 col-sm-4 col-lg-3  text-center order-5">
+                <a href="mailto:ejemlo@gmail.com" class="nav-link waves-effect waves-light ">
+                  <i class="fa fa-envelope fa-2x fa-fw"></i>
+                  <p>{{site.data.redes.mail}}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright - Todos los derechos reservados - Desarrollado por <a href="https://javfr.github.io" target="_blank">Javier Franco Brustolon</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->

@@ -1,0 +1,32 @@
+<meta charset="utf-8" />
+<!--<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>-->
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{site.url}}/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{site.url}}/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{site.url}}/favicon-16x16.png">
+<link rel="manifest" href="{{site.url}}/site.webmanifest">
+
+{% if page.description %}
+<meta name="description" content="{{ page.description }}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ page.excerpt | strip_html }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+<meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+{% endif %}
+<meta name="author" content="{{ site.name }}" />
+<meta name="twitter:creator" content="{{site.name}}">
+
+{% if page.subtitle %}
+<meta property="og:title" content="{{site.name}} | {{ page.subtitle }}" />
+<meta property="twitter:title" content="{{site.name}} | {{ page.subtitle }}" />
+{% endif %}
+
+<!-- Twitter Card data -->
+<meta name="twitter:site" content="{{site.name}}" />
+<meta name="twitter:image" content="//images.weserv.nl/?url={{site.url}}/assets/images/active-activity-adult-1472887.jpg&w=300" />
+<meta property="og:image" content="//images.weserv.nl/?url={{site.url}}/assets/images/active-activity-adult-1472887.jpg&w=1000" />

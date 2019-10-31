@@ -1,0 +1,23 @@
+//Colors
+$pale-chesnut: #e0b7b7;
+$ganesboro: #dbdbdb;
+
+
+$main-background-color: $ganesboro;
+$navbar-horizontal-background-color: trasparent;
+$sidebar-background-color: $ganesboro;
+
+
+body{
+    background-color: $main-background-color;
+}
+#horizontalBar{
+    background-color: $navbar-horizontal-background-color;
+}
+#sidebar{
+    background-color: $sidebar-background-color;
+}
+
+.top-nav-collapse {
+    background-color: $navbar-horizontal-background-color !important;
+  }
